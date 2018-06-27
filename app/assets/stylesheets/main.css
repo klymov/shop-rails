@@ -8,9 +8,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
   position: relative;
-  font-weight:400px;
+  font-weight: 400;
 }
 
 ul li {
@@ -263,7 +262,7 @@ a#scrollUp i{
   outline: medium none;
   padding-left: 10px;
   width: 155px;
-  background-image: url(../images/home/searchicon.png);
+  /*background-image: url(../images/searchicon.png);*/
   background-repeat: no-repeat;
   background-position: 130px;
 }
@@ -893,13 +892,13 @@ h2.title {
 .product-overlay {
   background:#FE980F;
   top: 0;
-  display: none;
+  /*display: none;*/
   height: 0;
   position: absolute;
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
+  /*opacity:;*/
 }
 
 .single-products:hover .product-overlay {
@@ -911,7 +910,6 @@ h2.title {
 .product-overlay .overlay-content {
   bottom: 0;
   position: absolute;
-  bottom: 0;
   text-align: center;
   width: 100%;
 }
@@ -1026,7 +1024,7 @@ h2.title {
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
   background-color: #FE980F;
-  border:0px;
+  border:0;
   color: #FFFFFF;
   cursor: default;
   margin-right:0;
@@ -1548,7 +1546,7 @@ h2.title {
   width: auto;
   border-width: 8px;
   border-style: solid;
-  border-color:transparent transparent transparent #FE980F;
+  border-color: transparent #FE980F;
   position: absolute;
   top: 11px;
   left:48px;
@@ -2055,11 +2053,11 @@ h2.title {
   position: absolute;
   width: auto;
   height: auto;
-  border-color:transparent transparent transparent #FE980F;
-  border-width:4px;
+  border-color: transparent #FE980F;
+  border-width: 4px;
   border-style: solid;
-  top:6px;
-  left:24px
+  top: 6px;
+  left: 24px
 }
 
 .blog-post-area 
@@ -2141,8 +2139,7 @@ h2.title {
 
 .rating-area {
   border: 1px solid #F7F7F0;
-  direction: block;
-  overflow: hidden;
+   overflow: hidden;
 }
 
 .rating-area ul li {
@@ -2409,7 +2406,7 @@ h2.title {
   height: auto;
   border-style: solid;
   border-width: 8px;
-  border-color:#FE980F transparent transparent transparent;
+  border-color: #FE980F transparent;
   top: 25px;
   left: 5px
 } 
