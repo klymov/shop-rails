@@ -5,10 +5,11 @@
       <div class="productinfo text-center">
 
         <img src="images/gallery1.jpg" alt="">
-        <h2><%= item.price %> грн</h2>
-        <p><%= item.category.name_category %></p>
-        <p><%= item.name %></p>
+        <h2><%= i.price %> грн</h2>
+        <p><%= link_to i.category.name_category, "/items/#{i.id}" %></p>
+        <p><%= link_to i.name, "/items/#{i.id}" %></p>
         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+
 
       </div>
     </div>

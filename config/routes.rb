@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get 'items/new'
   get 'items/create' => 'items#create'
+  get 'contacts' => 'contacts#contacts'
+  #match '/contacts', to: 'contacts#contacts', via: 'get'
+
 
   root 'items#index'
 
