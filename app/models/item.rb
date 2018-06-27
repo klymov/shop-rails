@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   validates :price, numericality: { greater_than: 0, allow_nil: true }
   validates :quantity, numericality: { greater_than: 0, allow_nil: true }
 
-
+  belongs_to  :category
 =begin
   belongs_to  :category
   has_many    :positions

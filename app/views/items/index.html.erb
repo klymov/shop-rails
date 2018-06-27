@@ -1,67 +1,304 @@
-<header id="header">
-  <div class="header_top"><!--header_top-->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="contactinfo">
-            <ul class="nav nav-pills">
-              <li><a href="#"><i class="fa fa-phone"></i> +38 067 111 1111</a></li>
-              <li><a href="#"><i class="fa fa-envelope"></i> info@colobok.pp.ua</a></li>
-            </ul>
-          </div>
-        </div></div>
-    </div>
-  </div><!--/header_top-->
-  <div class="header-middle"><!--header-middle-->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="logo pull-left">
-            <a href="/">
-              <%= image_tag "/images/logo.png",
-                           # size: "50x20",
-                            alt: "Go Home",
-                            class: "nav_bar" %>
-             </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!--/header-middle-->
-  <div class="header-bottom"><!--header-bottom-->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-9">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar">1</span>
-              <span class="icon-bar">2</span>
-              <span class="icon-bar">3</span>
-            </button>
-          </div>
-          <div class="mainmenu pull-left">
-            <ul class="nav navbar-nav collapse navbar-collapse">
-              <li><a href="index.html" class="active">Главная</a></li>
-              <li class="dropdown"><a href="#">Продукты<i class="fa fa-angle-down"></i></a>
-                <ul role="menu" class="sub-menu">
-                  <li><a href="shop.html">Все продукты</a></li>
-                  <li><a href="product-details.html">Отдельный продукт</a></li>
-                  <li><a href="cart.html">Корзина</a></li>
-                </ul>
-              </li>
-              <li><a href="404.html">404</a></li>
-              <li><a href="contact-us.html">Контакт</a></li>
-            </ul>
-          </div>
-        </div>
-        <!--<div class="col-sm-3">
-            <div class="search_box pull-right">
-              <input type="text" placeholder="Search"/>
-            </div>
-          </div>-->
-      </div>
-    </div>
-  </div><!--/header-bottom-->
+<%= render 'shared/header' %>
 
-</header>
+<section>
+  <div class="container">
+    <div class="row">
+
+
+
+      <div class="category-tab"><!--category-tab-->
+        <div class="col-sm-12">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tshirt" data-toggle="tab">Тортики</a></li>
+            <li><a href="#blazers" data-toggle="tab">Печеньки</a></li>
+            <li><a href="#sunglass" data-toggle="tab">Желе</a></li>
+            <li><a href="#kids" data-toggle="tab">Пряники</a></li>
+            <li><a href="#poloshirt" data-toggle="tab">Хлеб</a></li>
+          </ul>
+        </div>
+        <div class="tab-content">
+
+          <div class="tab-pane fade active in" id="tshirt">
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="blazers">
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="sunglass">
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="kids">
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="poloshirt">
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="">
+                    <h2>1000 гр</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="product-image-wrapper">
+                <div class="single-products">
+                  <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="">
+                    <h2></h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!--/category-tab-->
+    </div>
+  </div>
+</section>
+
+
+
+<%= render "shared/footer" %>
