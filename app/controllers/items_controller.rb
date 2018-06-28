@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   # /items/1 GET
   def show
+    #@patient = Patient.find(params[:id])
     unless @item = Item.where(id: params[:id]).first
       render text: 'Page not found',status: 404
     end

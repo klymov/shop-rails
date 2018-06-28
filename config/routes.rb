@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get 'items' => 'items'
 
+  get 'home' => 'home#index'
+  get 'contacts' => 'home#contacts'
+  get 'delivery' => 'home#delivery'
+  get 'items' => 'items#index'
   get 'items/new'
   get 'items/create' => 'items#create'
-  get 'contacts' => 'contacts#contacts'
-  #match '/contacts', to: 'contacts#contacts', via: 'get'
+  get 'items/:id', to: 'items#show', as: 'item'
 
-
-  root 'items#index'
+  root 'home#index'
 
 end

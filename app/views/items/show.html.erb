@@ -1,14 +1,11 @@
-<h1><%= @item.name %></h1>
-<!--<span>Develop version</span>-->
+<% content_for :title, @item.name %>
 
-<ul>
-  <li> <%= "#{@item.price} грн." %>         </li>
-  <li> Количество: <%= @item.quantity %>    </li>
-  <li> <%= @item.description %>             </li>
-  <li> </li>
-</ul>
-<!--
-<%= link_to I18n.t('labels.edit'), edit_item_path(@item)%>
-<br>
-<%= link_to I18n.t('labels.home'), items_path %>
--->
+  <ul>
+    <li> <%= "#{@item.price} грн." %>         </li>
+    <li> Количество: <%= @item.quantity %>    </li>
+    <li> <%= @item.description %>             </li>
+    <li> </li>
+  </ul>
+
+  <br>
+  <%= link_to ('На главную страницу'), items_path %>

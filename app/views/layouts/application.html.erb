@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ShopRails</title>
+
+    <title><%= yield(:title) %> | ShopRails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +11,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/header' %>
+    <div class="container">
+      <h1><%= yield(:title) %></h1>
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>
