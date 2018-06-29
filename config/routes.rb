@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'contacts' => 'home#contacts'
   get 'delivery' => 'home#delivery'
   get 'items' => 'items#index'
+
   get 'items/new'
   get 'items/create' => 'items#create'
   get 'items/:id', to: 'items#show', as: 'item'
