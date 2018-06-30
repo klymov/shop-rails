@@ -8,4 +8,6 @@
   </ul>
 
   <br>
+
+  <%= link_to ('Удалить'), @item, method: :delete, data: { confirm: 'Точно удалить?' } %><br>
   <%= link_to ('На главную страницу'), items_path %>

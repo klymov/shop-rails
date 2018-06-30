@@ -1,14 +1,11 @@
 class Item < ApplicationRecord
 
-  validates :name, :description, presence: true
-  validates :description, presence: true
-  validates :category_id, presence: true
-  validates :price, numericality: { greater_than: 0, allow_nil: true }
-  validates :quantity, numericality: { greater_than: 0, allow_nil: true }
+  validates :name, :description, :category_id, presence: true
+  validates :price, :quantity, numericality: { greater_than: 0, allow_nil: true }
 
   belongs_to  :category
+
 =begin
-  belongs_to  :category
   has_many    :positions
   has_many    :carts, through: :positions
 =end
