@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   get 'home' => 'home#index'
   get 'contacts' => 'home#contacts'
   get 'delivery' => 'home#delivery'
+=begin
   get 'items' => 'items#index'
 
   get 'items/new'
-  get 'items/create' => 'items#create'
+  get 'items/create' => 'items#new'
   get 'items/:id', to: 'items#show', as: 'item'
+=end
+  resources :items
 
   root 'home#index'
 

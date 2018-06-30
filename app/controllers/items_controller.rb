@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :find_item, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :find_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.all
@@ -62,7 +62,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :description, :price, :quantity, :category_id)
+    params.require(:item).permit(:name, :description, :price, :quantity)
   end
 
   def find_item
