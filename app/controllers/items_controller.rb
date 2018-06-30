@@ -1,9 +1,13 @@
 class ItemsController < ApplicationController
 
   before_action :find_item, only: [:show, :edit, :update, :destroy]
+  #before_filter :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
 
   def index
     @items = Item.all
+    if params[:category_id]
+      @items = Item.where(category_id: params[:category_id])
+    end
     @categories = Category.all
   end
 
@@ -45,7 +49,7 @@ class ItemsController < ApplicationController
   # /items/1  PUT
   def update
     item_params
-    @item.updated_attributes(item_params)
+    @item.update_attributes(item_params)
     if @item.errors.empty?
       redirect_to item_path(@item)
     else

@@ -4,10 +4,10 @@
     <li> <%= "#{@item.price} грн." %>         </li>
     <li> Количество: <%= @item.quantity %>    </li>
     <li> <%= @item.description %>             </li>
-    <li> </li>
   </ul>
 
   <br>
 
-  <%= link_to ('Удалить'), @item, method: :delete, data: { confirm: 'Точно удалить?' } %><br>
-  <%= link_to ('На главную страницу'), items_path %>
+<%= link_to ('Редактировать'), "/items/#{@item.id}/edit" %>
+<%= link_to ('Удалить'), @item, method: :delete, data: { confirm: 'Точно удалить?' } %><br>
+<%= link_to ('На главную страницу'), items_path %>
