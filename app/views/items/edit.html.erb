@@ -1,9 +1,21 @@
 <% content_for :title, "Редактирование" %>
 
-<%= form_for @item do |f| %>
+<%= form_for @item, html: { multipart: true } do |f| %>
+
+  <div>Изображения:<br/>
+    <%= f.file_field :images, multiple: true %><br/>
+    <% if @item.images? %>
+      <% @item.images.each do |i| %>
+        <div>
+          <%= link_to( image_tag(i.detail_promo_img.url, alt: 'Image', class: 'detail_promo_img'), i.responsive_img.url, target: '_blank') %>
+          <label>Изображение <%= i %></label>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
   <div>Название: <br/><%= f.text_field :name %></div>
-  <div class="field">Категория: <br/>
+  <div>Категория: <br/>
     <%= f.collection_select(:category_id, Category.all, :id, :name_category) %>
   </div>
   <div>Описание: <br/>

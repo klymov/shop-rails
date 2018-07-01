@@ -5,6 +5,9 @@ class Item < ApplicationRecord
 
   belongs_to  :category
 
+  mount_uploaders :images, ImageUploader
+  serialize :images, JSON # If you use SQLite, add this line.
+
 =begin
   has_many    :positions
   has_many    :carts, through: :positions

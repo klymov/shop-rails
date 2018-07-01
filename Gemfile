@@ -27,8 +27,17 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# -------------------------
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+ gem 'mini_magick', '~> 4.8'
+
+# upload files from Ruby applications
+gem 'carrierwave', '~> 1.0'
+
+# File Validators gem adds file size and content type validations to ActiveModel
+gem 'file_validators'
+
+# --------------------------
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

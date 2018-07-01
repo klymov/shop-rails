@@ -1,12 +1,19 @@
 <% content_for :title, @item.name %>
 
-  <ul>
-    <li> <%= "#{@item.price} грн." %>         </li>
-    <li> Количество: <%= @item.quantity %>    </li>
-    <li> <%= @item.description %>             </li>
-  </ul>
+<% if @item.images? %>
+  <% @item.images.each do |i| %>
+    <%= link_to( image_tag(i.detail_promo_img.url, alt: 'Image', class: 'detail_promo_img'), i.responsive_img.url, target: '_blank') %>
+  <% end %>
+<% end %>
 
-  <br>
+<ul>
+ <li> Категория: <%= @item.category.name_category %>     </li>
+ <li> <%= "#{@item.price} грн." %>         </li>
+ <li> Количество: <%= @item.quantity %>    </li>
+ <li> <%= @item.description %>             </li>
+</ul>
+
+<br>
 
 <%= link_to ('Редактировать'), "/items/#{@item.id}/edit" %>
 <%= link_to ('Удалить'), @item, method: :delete, data: { confirm: 'Точно удалить?' } %><br>
