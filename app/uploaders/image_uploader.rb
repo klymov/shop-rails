@@ -33,20 +33,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
 
-   version :detail_img_thumbs_l_i do
-     process resize_to_fit: [40, 25]
-   end
-
-   version :detail_promo_img do
-     process resize_to_fit: [108, 80]
-   end
+   version :productinfo do
+     process resize_to_fit: [300, 300]
+     #process crop: '261x200+0+0'
+     process resize_and_crop: 261
+     end
 
    version :thumb do
      process resize_to_fit: [200, 200]
-   end
-
-   version :responsive_img do
-     process resize_to_fit: [240, 145]
    end
 
    version :responsive_img do
@@ -64,4 +58,32 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+
+   private
+
+  # Simplest way
+   def crop(geometry)
+     manipulate! do |img|
+       img.crop(geometry)
+       img
+     end
+   end
+
+  # Resize and crop square from Center
+   def resize_and_crop(size)
+     manipulate! do |image|
+       if image[:width] < image[:height]
+         remove = ((image[:height] - image[:width])/2).round
+         image.shave("0x#{remove}")
+       elsif image[:width] > image[:height]
+         remove = ((image[:width] - image[:height])/2).round
+         image.shave("#{remove}x0")
+       end
+       image.resize("#{size}x#{size}")
+       image
+     end
+   end
+
 end
+
