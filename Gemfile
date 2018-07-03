@@ -37,6 +37,9 @@ gem 'carrierwave', '~> 1.0'
 # File Validators gem adds file size and content type validations to ActiveModel
 gem 'file_validators'
 
+# css
+gem 'bootstrap-sass'
+
 # --------------------------
 
 # Use Capistrano for deployment
