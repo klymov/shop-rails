@@ -3,7 +3,7 @@
     <div class="single-products">
       <div class="productinfo text-center">
 
-        <%= link_to(image_tag(i.images[0].productinfo.url, alt: 'Image', class: 'detail_promo_img'), "/items/#{i.id}", target: '_blank') %>
+        <%= link_to(image_tag(i.images[0].productinfo.url, alt: 'Image', class: 'detail_promo_img'), "/items/#{i.id}", target: '_self') %>
 
         <h2><%= i.price %> грн</h2>
         <p><%= i.category.name_category %></p>

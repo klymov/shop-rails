@@ -8,9 +8,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
   position: relative;
-  font-weight:400px;
+  font-weight:400;
 }
 
 ul li {
@@ -263,7 +262,7 @@ a#scrollUp i{
   outline: medium none;
   padding-left: 10px;
   width: 155px;
-  background-image: url(../images/home/searchicon.png);
+  /*background-image: url(/images/search-icon.png);*/
   background-repeat: no-repeat;
   background-position: 130px;
 }
@@ -581,7 +580,7 @@ ul.sub-menu {
 }
 
 .item {
-  padding-left: 100px;
+  /*padding-left: 100px;*/
 }
 
 
@@ -893,13 +892,13 @@ h2.title {
 .product-overlay {
   background:#FE980F;
   top: 0;
-  display: none;
+  /*display: none;*/
   height: 0;
   position: absolute;
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
+  /*opacity:;*/
 }
 
 .single-products:hover .product-overlay {
@@ -2141,7 +2140,7 @@ h2.title {
 
 .rating-area {
   border: 1px solid #F7F7F0;
-  direction: block;
+  /*direction: block;*/
   overflow: hidden;
 }
 
