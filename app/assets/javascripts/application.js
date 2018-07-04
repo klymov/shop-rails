@@ -13,7 +13,8 @@
 //= require jquery
 //= require rails-ujs
 //= require bootstrap
-//= require activestorage
-//= require turbolinks
-//= require main.js
+//= require jquery.scrollUp.min
+//= require price-range
+//= require jquery.prettyPhoto
+//= require main
 //= require_tree .

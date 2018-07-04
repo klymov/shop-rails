@@ -1,13 +1,8 @@
-<li>
+<li class="">
   <%= link_to  category.name_category,
-               controller: :items,
-               category_id: category.id,
+               {controller: :items,
+               category_id: category.id},
                method: :get,
-               :class => "",
-               :data => { :toggle => "tab" }%>
-
-<!--  'items?category_id=#{category.id}',-->
-
-<!--  link_to "Edit", @user, :class => "btn", :data => {:toggle => "modal"}-->
-
+               :data => { :toggle => "tab" }
+  %>
 </li>
