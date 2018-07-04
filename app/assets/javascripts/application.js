@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require activestorage
 //= require turbolinks
+//= require main.js
 //= require_tree .

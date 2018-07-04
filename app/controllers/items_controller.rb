@@ -5,10 +5,10 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @categories = Category.all
     if params[:category_id]
       @items = Item.where(category_id: params[:category_id])
     end
-    @categories = Category.all
   end
 
   # показ дорогих товаров
