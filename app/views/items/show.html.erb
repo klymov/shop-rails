@@ -1,4 +1,5 @@
 <% content_for :title, @item.name %>
+<h1><%= yield(:title) %></h1>
 
 <div class="row">
   <% a = 0 %>
@@ -9,7 +10,8 @@
                               alt: "Image",
                               class: "img-responsive",
                               data: { toggle: "modal", target: "#myModal" }),
-                     "#myGallery", data: { slide_to: a } %>
+                              "#myGallery",
+                              data: { slide_to: a } %>
       </div>
       <% a += 1 %>
     <% end %>

@@ -9,7 +9,8 @@
               <li><a href="/contacts"><i class="fa fa-envelope"></i> info@colobok.pp.ua</a></li>
             </ul>
           </div>
-        </div></div>
+        </div>
+      </div>
     </div>
   </div><!--/header_top-->
   <div class="header-middle"><!--header-middle-->
@@ -63,7 +64,9 @@
         </div>
         <div class="col-sm-3">
           <div class="search_box pull-right">
-            <input type="text" placeholder="Search"/>
+            <% if current_page?( controller: 'items' ) %>
+              <input type='text' placeholder='Search'/>
+            <% end %>
           </div>
         </div>
       </div>
