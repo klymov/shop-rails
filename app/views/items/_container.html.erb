@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="category-tab"><!--category-tab-->
+
+   <div class="col-sm-12">
+      <ul class="nav nav-tabs">
+        <li class="<%= "active" if current_page?('/items', check_parameters: true) %>">
+          <a href="/items">Вся продукция</a>
+        </li>
+        <% @categories.each do |c| %>
+          <%= render "items/nav_category_tab", category: c %>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="tab-content">
+      <div class="tab-pane fade active in" id="tshirt">
+        <% @items.each do |item| %>
+          <%= render "items/product_row", i: item %>
+        <% end %>
+      </div>
+    </div>
+
+  </div><!--/category-tab-->
+
+</div>

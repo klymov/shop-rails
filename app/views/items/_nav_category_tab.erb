@@ -1,4 +1,4 @@
-<li class="">
+<li class="<%= "active" if current_page?( controller: 'items', category_id: category.id ) %>">
   <%= link_to  category.name_category,
                {controller: :items,
                category_id: category.id},
