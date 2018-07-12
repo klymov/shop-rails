@@ -38,19 +38,24 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-          </button>
+            </button>
           </div>
           <div class="mainmenu pull-left">
             <ul class="nav navbar-nav collapse navbar-collapse" style="height: 1px;">
-              <li><a href="/home" class="<%= "active" if current_page?('/home', check_parameters: true) %>">Главная</a></li>
+              <li><a href="/home" class="<%= "active" if current_page?('/home', check_parameters: true) %>">Главная</a>
+              </li>
               <li class="dropdown">
-                <a href="/items" class="<%= "active" if current_page?('/items') %>" >Продукция<i class="fa fa-angle-down"></i></a>
+                <a href="/items" class="<%= "active" if current_page?('/items') %>">Продукция<i class="fa fa-angle-down"></i></a>
                 <ul role="menu" class="sub-menu">
                   <li><a href="/items/new">Добавить продукцию</a></li>
                 </ul>
               </li>
-              <li><a href="/delivery" class="<%= "active" if current_page?('/delivery', check_parameters: true) %>" >Доставка</a></li>
-              <li><a href="/contacts" class="<%= "active" if current_page?('/contacts', check_parameters: true) %>" >Контакты</a></li>
+              <li>
+                <a href="/delivery" class="<%= "active" if current_page?('/delivery', check_parameters: true) %>">Доставка</a>
+              </li>
+              <li>
+                <a href="/contacts" class="<%= "active" if current_page?('/contacts', check_parameters: true) %>">Контакты</a>
+              </li>
 
               <li class="dropdown"><a href="#">Мой аккаунт<i class="fa fa-angle-down"></i></a>
                 <ul role="menu" class="sub-menu">
@@ -64,8 +69,8 @@
         </div>
         <div class="col-sm-3">
           <div class="search_box pull-right">
-            <% if current_page?( controller: 'items' ) %>
-              <input type='text' placeholder='Search'/>
+            <% if current_page?(controller: 'items') %>
+              <%= render "shared/search_filters" %>
             <% end %>
           </div>
         </div>

@@ -6,9 +6,40 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     @categories = Category.all
+
     if params[:category_id]
       @items = Item.where(category_id: params[:category_id])
+    elsif params[:search]
+      @items = @items.where("description like :q or name like :q", :q => "%#{params[:search]}%")
     end
+
+
+=begin
+    @products = Product.all
+
+    search = params[:search]
+    @products = @products.where("title ILIKE '%?%'", search) if search
+
+    from_price = params[:from_price]
+    @products = @products.where('price > ?', from_price) if from_price
+
+    to_price = params[:to_price]
+    @products = @products.where('price < ?', to_price) if to_price
+
+    property_ids = params[:properties]
+    if properties
+      @products = @products.joins(:product_properties)
+                      .where(property_id: property_ids)
+    end
+
+    category_id = params[:category_id]
+    @products = @products.where(category_id: category_id) if category_id
+
+    sort_direction = params[:sort_direction].to_sym || :desc
+    sort_type = params[:sort_type].to_sym || :price
+    page_number = params[:page] || 0
+    @products = @products.order(sort_type => sort_direction).page(page_number)
+=end
   end
 
   # показ дорогих товаров
@@ -20,7 +51,7 @@ class ItemsController < ApplicationController
   def show
     #@patient = Patient.find(params[:id])
     unless @item = Item.where(id: params[:id]).first
-      render text: 'Page not found',status: 404
+      render text: 'Page not found', status: 404
     end
   end
 

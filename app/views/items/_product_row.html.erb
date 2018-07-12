@@ -3,12 +3,19 @@
     <div class="single-products">
       <div class="productinfo text-center">
 
-        <%= link_to(image_tag(i.images[0].productinfo.url, alt: 'Image', class: 'detail_promo_img'), "/items/#{i.id}", target: '_self') %>
+        <%= link_to(image_tag(i.images[0].productinfo.url,
+                              alt: 'Image',
+                              class: 'detail_promo_img'),
+                    "/items/#{i.id}",
+                    target: '_self') %>
 
         <h2><%= i.price %> грн</h2>
         <p><%= i.category.name_category %></p>
         <p><%= link_to i.name, "/items/#{i.id}" %></p>
-        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+        <a href="#" class="btn btn-default add-to-cart">
+          <i class="fa fa-shopping-cart"></i>
+          Add to cart
+        </a>
 
       </div>
     </div>

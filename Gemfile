@@ -40,6 +40,9 @@ gem 'file_validators'
 # css
 gem 'bootstrap-sass'
 
+# search ftext
+gem 'elasticsearch'
+
 # --------------------------
 
 # Use Capistrano for deployment

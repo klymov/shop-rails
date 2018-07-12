@@ -9,9 +9,9 @@
         <%= link_to image_tag(i.productinfo.url,
                               alt: "Image",
                               class: "img-responsive",
-                              data: { toggle: "modal", target: "#myModal" }),
-                              "#myGallery",
-                              data: { slide_to: a } %>
+                              data: {toggle: "modal", target: "#myModal"}),
+                    "#myGallery",
+                    data: {slide_to: a} %>
       </div>
       <% a += 1 %>
     <% end %>
@@ -19,16 +19,16 @@
 </div>
 
 <ul>
- <li> Категория: <%= @item.category.name_category %>     </li>
- <li> <%= "#{@item.price} грн." %>         </li>
- <li> Количество: <%= @item.quantity %>    </li>
- <li> <%= @item.description %>             </li>
+  <li> Категория: <%= @item.category.name_category %>     </li>
+  <li> <%= "#{@item.price} грн." %>         </li>
+  <li> Количество: <%= @item.quantity %>    </li>
+  <li> <%= @item.description %>             </li>
 </ul>
 
 <br>
 
 <%= link_to ('Редактировать'), "/items/#{@item.id}/edit" %>
-<%= link_to ('Удалить'), @item, method: :delete, data: { confirm: 'Точно удалить?' } %><br>
+<%= link_to ('Удалить'), @item, method: :delete, data: {confirm: 'Точно удалить?'} %><br>
 <%= link_to ('На главную страницу'), items_path %>
 
 <div class="modal fade" id="myModal">
@@ -64,10 +64,11 @@
           </div><!--end carousel-inner-->
           <!-- Previous and Next buttons-->
           <a class="left carousel-control" href="#myGallery" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
-                                                                          href="#myGallery" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#myGallery" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
         </div><!-- myGallery-->
 
       </div><!-- modal-body-->
