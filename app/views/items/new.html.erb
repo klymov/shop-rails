@@ -9,8 +9,8 @@
   <div>Описание: <br/>
     <%= f.text_area :description, class: 'form-control', rows:'1', placeholder: 'Особенности товара'  %>
   </div>
-  <div>Цена:<br/><%= f.number_field(:price, in: 0.00..200.00, step: 0.01) %></div>
-  <div>Кол-во: <br/><%= f.number_field( :quantity, in: 1..30, step: 1) %></div>
+  <div>Цена:<br/><%= f.number_field(:price, in: 0.00..3000.00, step: 0.01) %></div>
+  <div>Кол-во: <br/><%= f.number_field( :quantity, in: 1..1000, step: 1) %></div>
 
   <div>Изображение:
     <%= f.file_field :images, multiple: true %>

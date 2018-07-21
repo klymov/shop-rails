@@ -1,5 +1,19 @@
 <header id="header">
   <div class="header_top"><!--header_top-->
+<!--    <p class="notice"><%#= notice %></p>
+    <p class="alert"><%#= alert %></p>-->
+    <div class="navbar-inverse navbar-fixed-top navbar-right nav">
+
+      <% if user_signed_in? %>
+        Вы авторизовались как <%= current_user.email %>.
+        Выйти <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in', user_session_path %> илиющиеся
+        <%= link_to 'Sign up', new_user_registration_path %>
+      <% end %>
+
+    </div>
+    <br>
     <div class="container">
       <div class="row">
         <div class="col-sm-6">

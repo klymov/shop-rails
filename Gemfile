@@ -43,6 +43,8 @@ gem 'bootstrap-sass'
 # search ftext
 gem 'elasticsearch'
 
+# authorization
+gem 'devise'
 # --------------------------
 
 # Use Capistrano for deployment

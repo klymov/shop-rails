@@ -7,12 +7,18 @@ class ItemsController < ApplicationController
     @items = Item.all
     @categories = Category.all
 
-    if params[:category_id]
+    if params[:category_id] && params[:search]
+      q = "%#{params[:search]}%"
+      category_id = params[:category_id]
+      @items = @items.where("category_id = :category_id and (lower(description) like :q or lower(name) like :q)",
+                            :q => q.downcase,
+                            :category_id => category_id)
+    elsif params[:category_id]
       @items = Item.where(category_id: params[:category_id])
     elsif params[:search]
-      @items = @items.where("description like :q or name like :q", :q => "%#{params[:search]}%")
+      @items = @items.where("lower(description) like :q or lower(name) like :q", :q => "%#{params[:search]}%".downcase)
     end
-
+  end
 
 =begin
     @products = Product.all
@@ -40,12 +46,15 @@ class ItemsController < ApplicationController
     page_number = params[:page] || 0
     @products = @products.order(sort_type => sort_direction).page(page_number)
 =end
-  end
+
 
   # показ дорогих товаров
+=begin
   def expensive
     @items = Item.where('price > 100')
   end
+=end
+
 
   # /items/1 GET
   def show
