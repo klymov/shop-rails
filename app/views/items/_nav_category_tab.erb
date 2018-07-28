@@ -1,8 +1,12 @@
-<li class="<%= "active" if current_page?( controller: 'items', category_id: category.id ) %>">
-  <%= link_to  category.name_category,
-               {controller: :items,
-               category_id: category.id},
-               method: :get,
-               :data => { :toggle => "tab" }
-  %>
+<% if @category_id == category.id.to_s %>
+  <li class='active'>
+<% else %>
+  <li>
+<% end %>
+<%= link_to category.name_category,
+            {controller: :items,
+             category_id: category.id},
+            method: :get,
+            :data => {:toggle => "tab"}
+%>
 </li>
