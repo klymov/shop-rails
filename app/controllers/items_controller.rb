@@ -7,12 +7,13 @@ class ItemsController < ApplicationController
     @items = Item.all
     @categories = Category.all
 
-    if params[:category_id] && params[:search]
-      @search = params[:search]
-      @category_id = params[:category_id]
-      @items = @items.where("category_id = :category_id and (lower(description) like :search or lower(name) like :search)",
-                            :search => @search,
-                            :category_id => @category_id)
+
+    if (params[:category_id] && params[:search])
+         @search = params[:search]
+         @category_id = params[:category_id]
+         @items = @items.where("category_id = :category_id and (lower(description) like :search or lower(name) like :search)",
+                               :search => "%#@search%".downcase,
+                               :category_id => @category_id)
     elsif params[:category_id]
       @category_id = params[:category_id]
       @items = @items.where("category_id = :category_id",
@@ -21,12 +22,10 @@ class ItemsController < ApplicationController
       @search = params[:search]
       @items = @items.where("lower(description) like :search or lower(name) like :search",
                             :search => "%#@search%".downcase)
-    else
-      @search = ''
-      @category_id = ''
+
     end
   #сделать отдельную переменную для поиска товара
-end
+  end
 
 =begin
     @products = Product.all

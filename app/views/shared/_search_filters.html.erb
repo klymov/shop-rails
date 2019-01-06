@@ -1,4 +1,12 @@
 <%= form_tag("/items", method: "get") do %>
-  <%= text_field_tag(:search) %>
-  <% submit_tag("search") %>
+  <%= text_field_tag (:search), params[:search] %>
+  <% if (params[:category_id]) %>
+    <%= hidden_field_tag (:category_id), params[:category_id] %>
+  <% end %>
+  <%= submit_tag 'Search' %>
 <% end %>
+<%#= form_tag vendors_search_path, method: :get do |f| %>
+  <%#= text_field_tag :search, params[:search], placeholder: "Search Vendors" %>
+  <%#= select_tag 'category', options_for_select(Category.all.map{|el| [el.name, el.id]}) %>
+  <%#= submit_tag 'Search' %>
+<%# end %>
