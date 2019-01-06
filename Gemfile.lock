@@ -246,8 +246,10 @@ DEPENDENCIES
   file_validators
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  loofah (>= 2.2.3)
   mini_magick (~> 4.8)
   puma (~> 3.11)
+  rack (>= 2.0.6)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
