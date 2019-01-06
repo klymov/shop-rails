@@ -234,6 +234,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activejob (>= 5.2.0, < 5.2.1.1)
+  activestorage (>= 5.2.0, < 5.2.1.1)
   bootsnap (>= 1.1.0)
   bootstrap-sass
   byebug
